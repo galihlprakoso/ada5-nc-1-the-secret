@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q2R-Cl-fPZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zhf-cd-nnV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="i13-4H-se6">
-                                <rect key="frame" x="143" y="411" width="128" height="128"/>
+                                <rect key="frame" x="143" y="389" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="HFh-Xm-8NZ"/>
                                     <constraint firstAttribute="height" constant="128" id="Yhp-NW-vP9"/>
@@ -51,6 +51,9 @@
                                     <imageReference key="image" image="key" catalog="system" symbolScale="large"/>
                                     <fontDescription key="titleFontDescription" name="Avenir-Black" family="Avenir" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="gA1-9m-44R" kind="show" id="Sn3-ee-HDE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GId-xl-jaq"/>
@@ -78,10 +81,9 @@
         <!--Navigation Controller-->
         <scene sceneID="eAn-eb-Vxh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zhf-cd-nnV" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="zhf-cd-nnV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HDy-zu-bpF">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -148,6 +150,9 @@
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="q2R-Cl-fPZ" kind="show" id="erL-gW-xWD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RYt-BP-ucW"/>
@@ -165,6 +170,7 @@
                             <constraint firstItem="0NP-9B-z5y" firstAttribute="firstBaseline" secondItem="z0M-iR-Jse" secondAttribute="baseline" constant="57.5" symbolType="layoutAnchor" id="hzh-F0-5oR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fKP-sq-GMo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8W4-fw-Rzt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,11 +181,12 @@
             <objects>
                 <viewController storyboardIdentifier="HomeScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="q2R-Cl-fPZ" customClass="HomeScreenViewController" customModule="The_Secret" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SKh-MB-fhG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ADu-fb-sCP"/>
                         <color key="backgroundColor" red="0.20784313730000001" green="0.3411764706" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1vK-Ab-jgQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDz-wn-2Za" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,7 +195,7 @@
         <!--View Controller-->
         <scene sceneID="2Y0-ef-eND">
             <objects>
-                <viewController id="zSP-7I-C0w" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecretFormViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zSP-7I-C0w" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M4G-58-snu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +255,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="rectangle.and.pencil.and.ellipsis.rtl" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="27" scale="large"/>
-                                                    <color key="baseForegroundColor" red="0.20784313730000001" green="0.3411764706" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
@@ -274,7 +281,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="hand.point.up.braille.fill" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22" scale="large"/>
-                                                    <color key="baseForegroundColor" red="0.20784313730000001" green="0.3411764706" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
@@ -360,6 +367,9 @@
                                         <integer key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="q2R-Cl-fPZ" kind="show" id="gtB-c8-733"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uBX-ir-7Ke"/>
@@ -391,6 +401,9 @@
             <point key="canvasLocation" x="2734.7826086956525" y="-186.16071428571428"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gtB-c8-733"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="AppLogo" width="106" height="230"/>
         <image name="UnlockButtonBg" width="722" height="386"/>

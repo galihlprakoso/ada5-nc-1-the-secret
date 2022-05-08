@@ -49,12 +49,12 @@ class SecretItemViewCell: UICollectionViewCell {
         textDescription.font = UIFont.systemFont(ofSize: FontSize.extraSmall)
         
         NSLayoutConstraint.activate([
-            iconView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            iconView.widthAnchor.constraint(equalToConstant: MediaDimension.large),
-            iconView.heightAnchor.constraint(equalToConstant: MediaDimension.large),
+            iconView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Spacing.small),
+            iconView.widthAnchor.constraint(equalToConstant: MediaDimension.normal),
+            iconView.heightAnchor.constraint(equalToConstant: MediaDimension.normal),
             iconView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
-            textLabel.topAnchor.constraint(equalTo: iconView.bottomAnchor),
+            textLabel.topAnchor.constraint(equalTo: iconView.bottomAnchor, constant: Spacing.small),
             textLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Spacing.small),
             textLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             

@@ -22,6 +22,7 @@
 		3FF8AD2128283442005B30A7 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8AD2028283442005B30A7 /* HexColor.swift */; };
 		3FF8AD232828348F005B30A7 /* SecretItemAddButtonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8AD222828348F005B30A7 /* SecretItemAddButtonViewCell.swift */; };
 		3FF8AD26282844BD005B30A7 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8AD25282844BD005B30A7 /* PinterestLayout.swift */; };
+		3FF8AD2928285B93005B30A7 /* SecretItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8AD2828285B93005B30A7 /* SecretItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		3FF8AD2028283442005B30A7 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 		3FF8AD222828348F005B30A7 /* SecretItemAddButtonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretItemAddButtonViewCell.swift; sourceTree = "<group>"; };
 		3FF8AD25282844BD005B30A7 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		3FF8AD2828285B93005B30A7 /* SecretItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		3FF8AD2728284F13005B30A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3FF8AD2828285B93005B30A7 /* SecretItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				3FF8AD232828348F005B30A7 /* SecretItemAddButtonViewCell.swift in Sources */,
 				3FF8AD1328281A7D005B30A7 /* Spacing.swift in Sources */,
 				3FF8AD2128283442005B30A7 /* HexColor.swift in Sources */,
+				3FF8AD2928285B93005B30A7 /* SecretItem.swift in Sources */,
 				3F0DB4CA281BC5BD00AFFE08 /* HomeScreenViewController.swift in Sources */,
 				3F0DB4CD281BDF9D00AFFE08 /* SecretItemViewCell.swift in Sources */,
 			);

@@ -59,7 +59,7 @@ extension HomeScreenViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 24
+        return SecretItem.secretItems.count + 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -72,8 +72,11 @@ extension HomeScreenViewController: UICollectionViewDataSource {
         }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SecretItemViewCell.name, for: indexPath) as! SecretItemViewCell
-
-        cell.iconView.image = UIImage(named: "lockshield")
+        
+        let secretItem = SecretItem.secretItems[indexPath.item - 2]
+        cell.iconView.image = UIImage(named: secretItem.iconName)
+        cell.textLabel.text = secretItem.title
+        cell.textDescription.text = secretItem.date
 
         return cell
     }
@@ -89,7 +92,14 @@ extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension HomeScreenViewController: UICollectionViewDelegate {}
+extension HomeScreenViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (indexPath.item == 1) {
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecretFormViewController") as UIViewController
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
+}
 
 extension HomeScreenViewController: PinterestLayoutDelegate {
   func collectionView(
